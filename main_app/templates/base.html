@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="total-nav">
+        <ul>
+          <li>
+            <a href="/">Back to Home Page</a>
+          </li>
+        </ul>
+        <ul class="right-nav">
+          <li><a href="/planets">View By Planet</a></li>
+          <li><a href="/herb">View By Herb</a></li>
+          <li><a href="/system">View By Body System</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>{% block content %} {% endblock %}</main>
+    <footer class="page-footer">Here is a footer</footer>
+  </body>
+</html>

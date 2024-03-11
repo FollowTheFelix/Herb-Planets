@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Planets Listed Here</h1>
+{% for planet in planets %}
+<div class="card">
+  <div class="card-content">
+    <h2 class="card-title">{{ planet.name }}</h2>
+    <p>
+      <strong>Herbs:</strong> <br />
+      {{ planet.herbs }}
+    </p>
+    <p>
+      <strong>Energies:</strong><br />
+      {{ planet.energies }}
+    </p>
+  </div>
+</div>
+{% endfor %} {% endblock %}
