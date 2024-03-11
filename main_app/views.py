@@ -29,3 +29,5 @@ def planets_index(request):
     return render(request, 'planets/index.html', {'planets': planets})
 def herbs_index(request):
     return render(request, 'herbs/index.html', {'herbs': herb_list})
+def about(request):
+    return render(request, 'about.html')
