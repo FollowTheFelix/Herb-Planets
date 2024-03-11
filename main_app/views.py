@@ -22,6 +22,18 @@ for planet in planets:
 
 herb_list = sorted(list(herb))
 
+body_systems = [
+    {'system': 'plants'},
+    {'system': 'plants'},
+    {'system': 'plants'},
+    {'system': 'plants'},
+    {'system': 'plants'},
+    {'system': 'plants'},
+    {'system': 'plants'},
+    {'system': 'plants'},
+    {'system': 'plants'}
+]
+
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
@@ -31,3 +43,7 @@ def herbs_index(request):
     return render(request, 'herbs/index.html', {'herbs': herb_list})
 def about(request):
     return render(request, 'about.html')
+def herb(request, herb):
+    return render(request, 'herbs/herb', {'herb': herb})
+def bodysystems_index(request):
+    return render(request, 'bodysystems/index.html', {'bodysystem': body_systems})
