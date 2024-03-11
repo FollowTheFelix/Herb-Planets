@@ -14,8 +14,18 @@ planets = [
 
 ]
 
+herb= set()
+
+for planet in planets:
+    herbs = planet['herbs'].split(', ')
+    herb.update(herbs)
+
+herb_list = sorted(list(herb))
+
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
 def planets_index(request):
     return render(request, 'planets/index.html', {'planets': planets})
+def herbs_index(request):
+    return render(request, 'herbs/index.html', {'herbs': herb_list})

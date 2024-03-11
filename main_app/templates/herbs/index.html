@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Herbs Listed Here</h1>
+{% for herb in herbs %}
+<div>
+  <ul class="herb-list">
+    <li><a href="herbs/{{ herb }}">{{ herb }}</a></li>
+  </ul>
+</div>
+{% endfor %} {% endblock %}
