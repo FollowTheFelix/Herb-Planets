@@ -43,7 +43,9 @@ def herbs_index(request):
     return render(request, 'herbs/index.html', {'herbs': herb_list})
 def about(request):
     return render(request, 'about.html')
-def herb(request, herb):
-    return render(request, 'herbs/herb.html', {'herb': herb})
 def bodysystems_index(request):
     return render(request, 'bodysystems/index.html', {'body_systems': body_systems})
+def system(request, system):
+    return render(request, 'bodysystems/system.html', {'system': system})
+def herb(request, herb):
+    return render(request, 'herbs/herb.html', {'herb': herb})
