@@ -1,4 +1,10 @@
 {% extends 'base.html' %} {% block content %}
 
 <h1>Body Systems</h1>
-{% endblock %}
+{% for bodysystem in body_systems %}
+<ul>
+  <li>
+    <a href="{{ bodysystem }}">{{ bodysystem.system }}</a>
+  </li>
+</ul>
+{% endfor %} {% endblock %}
