@@ -7,5 +7,6 @@ urlpatterns = [
     path('herbs/', views.herbs_index, name='herbs'),
     path('about/', views.about, name='about'),
     path('body_system/', views.bodysystems_index, name='bodysystem'),
-    path('<str:herb>/', views.herb, name='herb'),
+
+    path('herbs/<str:herb>/', views.herb, name='herb'),
 ]
