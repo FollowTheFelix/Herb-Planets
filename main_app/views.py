@@ -23,15 +23,19 @@ for planet in planets:
 herb_list = sorted(list(herb))
 
 body_systems = [
-    {'system': 'system name', 'plants': 'associated plants'},
-    {'system': 'system name', 'plants': 'associated plants'},
-    {'system': 'system name', 'plants': 'associated plants'},
-    {'system': 'system name', 'plants': 'associated plants'},
-    {'system': 'system name', 'plants': 'associated plants'},
-    {'system': 'system name', 'plants': 'associated plants'},
-    {'system': 'system name', 'plants': 'associated plants'},
-    {'system': 'system name', 'plants': 'associated plants'},
-    {'system': 'system name', 'plants': 'associated plants'}
+    {'system': 'Bladder', 'plants': 'plants'},
+    {'system': 'Blood Tonic', 'plants': 'plants'},
+    {'system': 'Brain and Nervous System', 'plants': 'plants'},
+    {'system': 'Digestive', 'plants': 'plants'},
+    {'system': 'Family Tonic', 'plants': 'plants'},
+    {'system': 'First Aid', 'plants': 'plants'},
+    {'system': 'Heart Health', 'plants': 'plants'},
+    {'system': 'Lymphatic', 'plants': 'plants'},
+    {'system': 'Men''s Health', 'plants': 'plants'},
+    {'system': 'Musculoskeletal', 'plants': 'plants'},
+    {'system': 'Respiratory', 'plants': 'plants'},
+    {'system': 'Wellness/Immunity', 'plants': 'plants'},
+    {'system': 'Women''s Health', 'plants': 'plants'}
 ]
 
 # Create your views here.
