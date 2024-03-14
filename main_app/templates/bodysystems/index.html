@@ -4,7 +4,7 @@
 {% for bodysystem in body_systems %}
 <ul class="list">
   <li>
-    <a href="{{ bodysystem.system }}">{{ bodysystem.system }}</a>
+    <a href="{% url 'system' bodysystem.system %}">{{ bodysystem.system }}</a>
   </li>
 </ul>
 {% endfor %} {% endblock %}

@@ -1,5 +1,9 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView, DeleteView
 from .models import Planet
+from .models import Recipe
+
+
 
 planet = Planet.objects.all()
 herb= set()
@@ -22,7 +26,7 @@ body_systems = [
     {'system': 'Men''s Health', 'plants': 'plants'},
     {'system': 'Musculoskeletal', 'plants': 'plants'},
     {'system': 'Respiratory', 'plants': 'plants'},
-    {'system': 'Wellness/Immunity', 'plants': 'plants'},
+    {'system': 'Wellness and Immunity', 'plants': 'plants'},
     {'system': 'Women''s Health', 'plants': 'plants'}
 ]
 
@@ -42,3 +46,10 @@ def system(request, system):
     return render(request, 'bodysystems/system.html', {'system': system})
 def herb(request, herb):
     return render(request, 'herbs/herb.html', {'herb': herb})
+class RecipeCreate(CreateView):
+    model = Recipe
+    fields = '__all__'
+    template_name = 'herbs/create_recipe.html'
+    def from_valid(self, form):
+        form.instance.user = self.request.user
+        return super(RecipeCreate, self).form_valid(form)
