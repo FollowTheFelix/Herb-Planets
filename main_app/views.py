@@ -5,14 +5,14 @@ from .models import Recipe
 
 
 
-planet = Planet.objects.all()
-herb= set()
+# planet = Planet.objects.all()
+# herb= set()
 
-for planet in planet:
-    herbs = planet.herbs.split(', ')
-    herb.update(herbs)
+# for planet in planet:
+#     herbs = planet.herbs.split(', ')
+#     herb.update(herbs)
 
-herb_list = sorted(list(herb))
+# herb_list = sorted(list(herb))
 
 body_systems = [
     {'system': 'Bladder', 'plants': 'plants'},
