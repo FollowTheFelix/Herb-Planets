@@ -1,18 +1,8 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, DeleteView
-from .models import Planet
-from .models import Recipe
+from .models import Planet, Recipe, Herb
 
 
-
-# planet = Planet.objects.all()
-# herb= set()
-
-# for planet in planet:
-#     herbs = planet.herbs.split(', ')
-#     herb.update(herbs)
-
-# herb_list = sorted(list(herb))
 
 body_systems = [
     {'system': 'Bladder', 'plants': 'plants'},
@@ -37,6 +27,7 @@ def planets_index(request):
     planet = Planet.objects.all()
     return render(request, 'planets/index.html', {'planet': planet})
 def herbs_index(request):
+    herb_list = Herb.objects.all()
     return render(request, 'herbs/index.html', {'herbs': herb_list})
 def about(request):
     return render(request, 'about.html')

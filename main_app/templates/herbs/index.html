@@ -4,7 +4,7 @@
 {% for herb in herbs %}
 <div>
   <ul class="list">
-    <li><a href="{% url 'herb' herb %}">{{ herb }}</a></li>
+    <li><a href="{% url 'herb' herb.name %}">{{ herb }}</a></li>
   </ul>
 </div>
 {% endfor %} {% endblock %}
