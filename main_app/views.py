@@ -25,7 +25,7 @@ def home(request):
     return render(request, 'home.html')
 def planets_index(request):
     planet = Planet.objects.all()
-    return render(request, 'planets/index.html', {'planet': planet})
+    return render(request, 'planets/index.html', {'planets': planet})
 def herbs_index(request):
     herb_list = Herb.objects.all()
     return render(request, 'herbs/index.html', {'herbs': herb_list})
